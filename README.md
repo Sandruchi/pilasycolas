@@ -30,4 +30,5 @@ Sandra Rodriguez Rodriguez
 Proyecto desarrollado como parte de la práctica “Implementación de teoría de pilas y colas”, aplicando conocimientos de estructuras dinámicas y ética técnica.
 
 
+<img width="544" height="939" alt="image" src="https://github.com/user-attachments/assets/b6b8950b-cddd-4283-8cc1-4647b25fb54c" />
 
