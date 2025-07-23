@@ -1,158 +1,33 @@
-using System;
-using System.Collections.Generic;
+Descripción del Sistema
 
-namespace ParqueDiversiones
-{
-    class Persona
-    {
-        public string Nombre { get; set; }
-        public int ID { get; set; }
+El sistema genera una cola de hasta 35 visitantes y asigna un máximo de 30 asientos. Los primeros en ingresar reciben asiento; los restantes son rechazados con un mensaje informativo. La estructura `Queue<Persona>` garantiza el principio FIFO, respetando el orden de llegada.
 
-        public Persona(string nombre, int id)
-        {
-            Nombre = nombre;
-            ID = id;
-        }
-    }
+Cómo Ejecutar
 
-    class Atraccion
-    {
-        private Queue<Persona> colaEspera = new Queue<Persona>();
-        private List<Persona> asientosAsignados = new List<Persona>();
-        private const int maxAsientos = 30;
+1. Abrir el proyecto en Visual Studio
+2. Verificar que los archivos `.cs` estén incluidos correctamente
+3. Compilar y ejecutar (`Ctrl + F5` o botón )
+4. Observar en consola el ingreso, asignación y resumen final
 
-        public void IngresarPersona(Persona p)
-        {
-            if (colaEspera.Count + asientosAsignados.Count < maxAsientos)
-            {
-                colaEspera.Enqueue(p);
-                Console.WriteLine($"Ingreso exitoso: {p.Nombre} está en espera.");
-            }
-            else
-            {
-                Console.WriteLine("Lo sentimos, todos los asientos están ocupados.");
-            }
-        }
+Evidencias
 
-        public void AsignarAsientos()
-        {
-            while (colaEspera.Count > 0 && asientosAsignados.Count < maxAsientos)
-            {
-                Persona p = colaEspera.Dequeue();
-                asientosAsignados.Add(p);
-                Console.WriteLine($"Asiento asignado a: {p.Nombre} (ID: {p.ID})");
-            }
-        }
+Las capturas de pantalla del funcionamiento del sistema se encuentran en la carpeta `/evidencias` y muestran:
 
-        public void MostrarEstado()
-        {
-            Console.WriteLine("\nPersonas en cola:");
-            foreach (var persona in colaEspera)
-                Console.WriteLine($"- {persona.Nombre} (ID: {persona.ID})");
+- El ingreso exitoso de personas a la cola
+- La asignación de asientos en orden
+- El mensaje de cierre de simulación
 
-            Console.WriteLine("\nPersonas con asiento:");
-            foreach (var persona in asientosAsignados)
-                Console.WriteLine($"✓ {persona.Nombre} (ID: {persona.ID})");
-        }
-    }
+Agente de Inteligencia Artificial
 
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Atraccion atraccion = new Atraccion();
+- Nombre del agente: Microsoft Copilot
+- Participación: Acompañó en el diseño lógico, redacción del código y estructuración del informe técnico
+- Porcentaje de colaboración estimado: 50%
+- Enfoque ético: El agente fue utilizado como apoyo formativo, respetando el aprendizaje autónomo y la revisión crítica de la estudiante
 
-            for (int i = 1; i <= 35; i++)
-            {
-                Persona persona = new Persona($"Visitante{i}", i);
-                atraccion.IngresarPersona(persona);
-            }
+Autora
 
-            atraccion.AsignarAsientos();
-            atraccion.MostrarEstado();
-        }
-    }
-}
+Sandra Rodriguez Rodriguez  
+Proyecto desarrollado como parte de la práctica “Implementación de teoría de pilas y colas”, aplicando conocimientos de estructuras dinámicas y ética técnica.
 
 
-/PilasColasSandraCSharp/
-├── Persona.cs
-├── Atraccion.cs
-├── Program.cs
-├── README.md
-├── /evidencias/
-│   ├── captura1.png
-│   ├── captura2.png
 
-Atraccion.cs
-using System;
-using System.Collections.Generic;
-
-namespace ParqueDiversiones
-{
-    public class Atraccion
-    {
-        private Queue<Persona> colaEspera = new Queue<Persona>();
-        private List<Persona> asientosAsignados = new List<Persona>();
-        private const int maxAsientos = 30;
-
-        public void IngresarPersona(Persona p)
-        {
-            if (colaEspera.Count + asientosAsignados.Count < maxAsientos)
-            {
-                colaEspera.Enqueue(p);
-                Console.WriteLine($"Ingreso exitoso: {p.Nombre} está en espera.");
-            }
-            else
-            {
-                Console.WriteLine("Lo sentimos, todos los asientos están ocupados.");
-            }
-        }
-
-        public void AsignarAsientos()
-        {
-            while (colaEspera.Count > 0 && asientosAsignados.Count < maxAsientos)
-            {
-                Persona p = colaEspera.Dequeue();
-                asientosAsignados.Add(p);
-                Console.WriteLine($"Asiento asignado a: {p.Nombre} (ID: {p.ID})");
-            }
-        }
-
-        public void MostrarEstado()
-        {
-            Console.WriteLine("\nPersonas en cola:");
-            foreach (var persona in colaEspera)
-                Console.WriteLine($"- {persona.Nombre} (ID: {persona.ID})");
-
-            Console.WriteLine("\nPersonas con asiento:");
-            foreach (var persona in asientosAsignados)
-                Console.WriteLine($"✓ {persona.Nombre} (ID: {persona.ID})");
-        }
-    }
-}
-
-Program.cs
-using System;
-
-namespace ParqueDiversiones
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Atraccion atraccion = new Atraccion();
-
-            for (int i = 1; i <= 35; i++)
-            {
-                Persona persona = new Persona($"Visitante{i}", i);
-                atraccion.IngresarPersona(persona);
-            }
-
-            atraccion.AsignarAsientos();
-            atraccion.MostrarEstado();
-
-            Console.WriteLine("\nSimulación completada.");
-        }
-    }
-}
