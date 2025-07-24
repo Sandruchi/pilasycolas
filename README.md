@@ -6,7 +6,10 @@ Objetivo académico
 
 Aplicar los conceptos de estructuras dinámicas (pilas y colas) en un entorno práctico, consolidando habilidades de modelado, lógica secuencial, reportería técnica y documentación del proceso. El sistema garantiza que las primeras 30 personas en ingresar sean asignadas a un asiento.
 
-<img width="786" height="897" alt="image" src="https://github.com/user-attachments/assets/472fa421-2b22-4122-a1be-2c53ad65c46a" />
+<img width="419" height="561" alt="image" src="https://github.com/user-attachments/assets/a2c542b4-f113-498d-a502-4991e3f315c4" />
+
+
+
 
 ---
 
@@ -29,7 +32,9 @@ Funcionamiento del sistema
 - Se asignan asientos en orden de llegada (FIFO)
 - Se imprime un resumen en consola mostrando quién está en espera y quién ya tiene asiento
 
-<img width="411" height="585" alt="image" src="https://github.com/user-attachments/assets/43399164-651c-42e2-b219-5b1f63de73fa" />
+<img width="403" height="533" alt="image" src="https://github.com/user-attachments/assets/5abc611b-d76c-4cd7-ab79-4a07090e87d8" />
+
+
 
 ---
 
@@ -80,5 +85,6 @@ Estudiante comprometida con la aplicación práctica de estructuras dinámicas e
 
 
 
-<img width="544" height="939" alt="image" src="https://github.com/user-attachments/assets/b6b8950b-cddd-4283-8cc1-4647b25fb54c" />
+<img width="308" height="586" alt="image" src="https://github.com/user-attachments/assets/3a32a4fd-9371-431f-b9ac-58428195206d" />
+
 
