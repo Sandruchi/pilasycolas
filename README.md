@@ -14,7 +14,7 @@ Estructura del proyecto
 
 ---
 
-## ⚙️ Funcionamiento del sistema
+Funcionamiento del sistema
 
 - Se simula el ingreso de 35 visitantes con nombres generados automáticamente (`Visitante1` a `Visitante35`)
 - El sistema admite hasta 30 personas en cola
@@ -53,7 +53,7 @@ Agente de Inteligencia Artificial utilizado
 
 Evidencias
 
-- Las capturas de pantalla se encuentran en `/evidencias`, mostrando:
+- Las capturas de pantalla se encuentran directamente en README.md
   - Ingreso exitoso de visitantes a la cola
   - Asignación ordenada de asientos
   - Estado final del sistema
