@@ -13,6 +13,11 @@ Aplicar los conceptos de estructuras dinámicas (pilas y colas) en un entorno pr
 Estructura del proyecto
 
 
+- `Persona.cs`: define la clase base con nombre e ID
+- `Atraccion.cs`: gestiona la cola, asignación de asientos y reportería
+- `Program.cs`: ejecuta la simulación principal
+- `/evidencias/`: contiene las capturas de pantalla del sistema en ejecución
+
 
 ---
 
